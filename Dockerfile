@@ -1,12 +1,11 @@
 FROM alpine
 
-ARG 0.2.3
+ENV NEVER_IDLE_VERSION 0.2.3
 ARG TARGETARCH
-ENV TARGETARCH=${TARGETARCH:-amd64}
 
 WORKDIR /app
 
-ADD https://github.com/layou233/NeverIdle/releases/download/${VERSION}/NeverIdle-linux-${TARGETARCH} /app/NeverIdle
+ADD https://github.com/layou233/NeverIdle/releases/download/${NEVER_IDLE_VERSION}/NeverIdle-linux-${TARGETARCH} /app/NeverIdle
 
 RUN chmod a+x /app/NeverIdle
 
