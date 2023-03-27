@@ -1,6 +1,6 @@
 FROM alpine
 
-ARG VERSION
+ARG 0.2.3
 ARG TARGETARCH
 ENV TARGETARCH=${TARGETARCH:-amd64}
 
@@ -17,4 +17,4 @@ RUN chmod a+x /app/NeverIdle
 #     	GiB of memory waste
 #   -n duration
 #     	Interval for network speed test
-CMD ["/app/NeverIdle", "-c", "1h7m", "-m", "2", "-n", "2h1m"]
+CMD ["/app/NeverIdle", "-c", "2h", "-m", "2", "-n", "4h"]
